@@ -23,20 +23,19 @@
 			<td></td>
 			<td></td>
 		</tr>
-		<%--
-		<%if(session.getAttribute("subjectList") != null){ 
-			for(int i=0; i<session.getAttribute("subjectList").size(); i++){
+		<%ArrayList<subject> subjectList = (ArrayList<subject>) session.getAttribute("subjectList");
+		  if(subjectList != null){ 
+			for(int i=0; i<subjectList.size(); i++){
 		%>
-		<%	} 
-		  }
-		%>
-			<td><%=session.getAttribute("subjectList").get(i).getSubject()%></td>
-		 --%>
 		<tr>
-			<td>java</td>
+			<td><%=subjectList.get(i).getSubject()%></td>
 			<td><input type="button" value="編集"></td>
 			<td><input type="button" value="削除"></td>
 		</tr>
+		<%	} 
+		  }
+		%>
+		
 	</table>
 	
 	<a href="registSubjects.jsp">新規登録</a>

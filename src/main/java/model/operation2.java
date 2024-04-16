@@ -1,6 +1,8 @@
 package model;
 
 
+import java.util.ArrayList;
+
 import javax.servlet.http.HttpSession;
 
 import ConnectDb.select;
@@ -8,7 +10,7 @@ import ConnectDb.select;
 public class operation2 {
 	
 	public void getList(HttpSession session) {
-		subject list =  select.main(null);
+		ArrayList<subject> list =  select.main(null);
 		
 		session.setAttribute("subjectList", list);
 	}
